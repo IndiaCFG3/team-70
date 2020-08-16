@@ -5,6 +5,8 @@ from main.forms import CreateUserForm
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
+from tkinter.filedialog import askopenfilename
+
 
 # Create your views here.
 def Login(request):
@@ -26,6 +28,17 @@ def Login(request):
 
         return render(request,'forms/login.html',context)
 
+def DragAndDrop(reuest):
+    Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
+    filelocation = askopenfilename() # open the dialog GUI
+    if file_name.endswith('.csv'):
+        df = pd.read_csv(input_file, skiprows = skip_rows)
+    elif file_name.endswith('.xlsx'):
+        df = pd.read_excel(input_file, skiprows = skip_rows)
+    elif file_name.endswith('.psv'):
+        df = pd.read_csv(input_file, sep = "|", skiprows = skip_rows)
+    else: 
+        print('file format not supported')
 
 def Register(request):
     if request.user.is_authenticated:
