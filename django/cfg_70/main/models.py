@@ -19,3 +19,17 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+class Employee(models.Model):
+    name = models.CharField(max_length=30)
+    center_name = models.CharField(max_length=30)
+    region_code = models.CharField(max_length=30)
+    grade =  models.CharField(max_length=30)
+    date_of_join = models.DateField()
+    salary = models.IntegerField()
+    mobile_no = models.CharField(max_length=10)
+    email_id = models.EmailField(max_length = 254)
+
+    def __str__(self):
+        return self.name
+

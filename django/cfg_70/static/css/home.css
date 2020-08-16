@@ -6,7 +6,7 @@
 	height: 500px;
 	}
 	
-	.body {
+	body {
 	font-family: 'Roboto Slab', serif;
 	}
 	
@@ -45,6 +45,15 @@
 	background: #B82827;
 	}
 	
+	.col-md-9 {
+	text-align: center;
+	padding-top: 20px;
+	}
+	
+	h3 {
+	margin: 0px;
+	}
+	
 	span {
 	font-size: 20px;
 	}
@@ -75,5 +84,12 @@
 	
 	ul {
 	list-style: none;
-	padding: 0px;
+	padding-top: 20px;
 	}
+	
+	li {
+	text-align: center;
+	line-height: 50px;
+	}
+	
+	

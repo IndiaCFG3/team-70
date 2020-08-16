@@ -1,10 +1,8 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -13,7 +11,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/e298a74f41.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/attendence.css' %}">
     <title>Student View</title>
 </head>
 <body>
@@ -24,8 +22,7 @@
         <span id="Donate">
         <img src="https://www.yuvaparivartan.org/img/skill-nsdc.png">
         <br>
-        <button type="button" class="btn btn-danger btn-lg">Donate Now</button><br>
-        <button type="button" class="btn btn-danger btn-lg"><a href="{% url 'Logout' %}">Logout</a></button>
+        <button type="button" class="btn btn-danger btn-lg">Donate Now</button>
         </div>
 
         <h3 id="middle1"></h3>
@@ -37,7 +34,7 @@
   <li>Academic Calender</li>
   <li id="#att"><a href="{% url 'Attendence' %}">Attendance</a></li>
   <li>profile</li>
-        <li>Student  Information</a></li>
+          <li>Student  Information</li>
           <li><a href="{% url 'Employee_View' %}">Employee Information</a></li>
           <li>Donation Information</li>
           <li>Expenses</li>
@@ -47,14 +44,18 @@
   </ul>
   </div>
   <div class="col-md-9">
-  <span>Lorem Ipsum</span>
-  <h3>Student Profile</h3>
-  <ul id="editSection">
-  <li><i class="fas fa-plus"></i>Bio-data</li>
-  <li><i class="fas fa-plus"></i>Performance</li>
-  <li><i class="fas fa-plus"></i>Performange Graph</li>
-  </ul>
+        <span id="batch">Batch Id:</span>
+        <br>
+  <input type="text" name="Batch-id">
+        <br>
+        <div id="batch">
+          <span>Date: </span>
+          <br>
+          <input type="date" name="Date">
+        </div>
   </div>
+      <button class="btn btn-lg">Submit</button>
 </div>
 </body>
 </html>
+
